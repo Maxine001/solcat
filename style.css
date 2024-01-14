@@ -17,6 +17,12 @@ body{
   overflow-x: hidden;
 }
 
+.container{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .sol-cat-header{
   position: fixed;
   z-index: 100;
