@@ -11,6 +11,10 @@
   cursor: pointer;
 }
 
+html{
+  font-display: 100%;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -62,11 +66,10 @@ body{
 menu{
   position: fixed;
   right: -100%;
-  background: linear-gradient(13deg, rgba(255,225,225,0.1), rgba(225,225,225,0));
+  background: #000;
   backdrop-filter: blur(10px);
   width: 100%;
   z-index: 3;
-  box-shadow: 0px 3px 10px 1px var(--bs-purple);
   height: 100vh;
   padding-right: 5px;
   display: none;
@@ -79,6 +82,8 @@ menu{
 .menu-btn{
   margin-right: 20px;
   display: none;
+  background: transparent;
+  color: #FFF;
 }
 
 a{
@@ -86,7 +91,7 @@ a{
   text-decoration: none;
   justify-content: center;
   display: flex;
-  color: rgb(60, 77, 45);
+  color: #fff;
   font-weight: bold;
   
 }
@@ -280,7 +285,8 @@ small{
   border-radius: 10px;
   margin-right: 15px;
   padding: 15px;
-  
+  font-family: sans-serif;
+  font-size: 20px;
 }
 
 ul li{
@@ -307,13 +313,43 @@ ul li{
 }
 
 .header-name{
-  color: greenyellow;
+  color: #252839;
+  -webkit-text-stroke: 0.3vw #383d52;
   font-size: 30px;
   font-weight: bold;
   font-family: sans-serif;
   padding-left: 15px;
   margin-bottom: 15px;
   padding-top: 0;
+  position: relative;
+
+}
+
+.header-name::before{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #01fe87;
+  padding-left: 15px;
+  -webkit-text-stroke: 0vw #383d52;
+  border-right: 2px solid #01fe87;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate
+{
+  0%,10%,100%
+  {
+    width: 0;
+  }
+  70%, 90%
+  {
+    width: 100%;
+  }
 }
 
 .img-container{
@@ -446,7 +482,8 @@ footer{
   }
   
   .img-troll img{
-    width: 90%;
+    width: 100%;
+    
   }
 
   .button-container{
@@ -486,12 +523,37 @@ footer{
   .menu-btn{
     margin-right: 20px;
     display: block;
+    width: 5rem;
+    height: 3rem;
   }
 
   body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    zoom: 100%;
+    font-family: sans-serif;
+  }
+
+  .main-text{
+    font-size: 20px;
+  }
+  .container-text{
+    font-size: 20px;
+  }
+
+  .container-title{
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .sub-title{
+    font-size: 30px;
+    font-family: bold;
+  }
+
+  .sub-text{
+    font-size: 20px;
   }
 }
 
