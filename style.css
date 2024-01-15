@@ -523,8 +523,10 @@ footer{
   .menu-btn{
     margin-right: 20px;
     display: block;
-    width: 5rem;
-    height: 3rem;
+    width: 8rem;
+    height: 6rem;
+    border: 2px solid rgb(32, 40, 25);
+    
   }
 
   body{
